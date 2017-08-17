@@ -1,0 +1,36 @@
+{
+  "name": "ohmyhome",
+  "version": "1.0.0",
+  "description": "Front End Test",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "build:js": "gulp scripts",
+    "build:sass": "gulp sass",
+    "build:images": "gulp images",
+    "build:fonts": "gulp fonts",
+    "watch": "gulp watch",
+    "start": "gulp && gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffreyturingan/ohmyhome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-watch": "^4.3.11",
+    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir-browsersync-official": "^1.0.0",
+    "node-sass": "^4.5.1",
+    "browser-sync": "^2.14.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-server-livereload": "^1.5.4",
+    "gulp-jade": "^1.1.0"
+  },
+  "dependencies": {
+  }
+}
