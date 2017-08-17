@@ -29,6 +29,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-server-livereload": "^1.5.4",
+    "gulp-imagemin": "^3.1.1",
     "gulp-jade": "^1.1.0"
   },
   "dependencies": {

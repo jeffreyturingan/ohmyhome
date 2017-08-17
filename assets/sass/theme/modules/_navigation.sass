@@ -1,0 +1,224 @@
+.module-navigation
+  width: 100%
+  height: auto
+  background: #fff
+  margin: 0
+  height: 55px
+  padding: 6px 0
+
+  +breakpoint($bp-large)
+    padding: 6px 0
+    height: auto
+
+  .module-navigation__container
+    width: 100%
+    margin: 0 auto
+    position: relative
+
+    +breakpoint($bp-large)
+      max-width: 1024px
+      position: relative
+
+    .module-navigation__logo
+      width: 140px
+      margin-left: 20px
+
+      +breakpoint($bp-large)
+        width: 160px
+        margin-left: 15px
+
+      img
+        width: auto
+        max-width: 100%
+        display: block
+        margin: 0 auto
+
+    .module-navigation__mainmenu
+      width: 100%
+      height: 100%
+      position: fixed
+      left: 100%
+      top: 0
+      background: rgba(229, 87, 16, 1)
+      transition: 500ms
+      z-index: 8
+      padding: 60px 30px 60px
+
+      +breakpoint($bp-large)
+        width: auto
+        height: auto
+        position: absolute
+        right: 123px
+        top: 10px
+        left: auto
+        padding: 0
+        background: transparent
+
+      &.open
+        left: 0
+        overflow: auto
+
+        +breakpoint($bp-large)
+          left: auto
+
+        .mobile-menuBtn-close
+          display: block
+
+
+      & > ul
+        display: block
+        width: 100%
+        padding-bottom: 60px
+
+        li
+
+          display: block
+          position: relative
+          font-family: $Rubik
+          font-size: 16px
+          color: rgba(72, 72, 72, 1)
+          margin-bottom: 10px
+          padding-bottom: 0
+
+          +breakpoint($bp-large)
+            display: inline-block
+            font-size: 19px
+            line-height: 23px
+            margin-right: 10px
+            margin-bottom: 0
+
+          a
+            color: #fff
+            transition: 200ms
+
+            +breakpoint($bp-large)
+              color: rgba(72, 72, 72, 1)
+
+
+            &:hover,&.active
+              +breakpoint($bp-large)
+                color: rgba(229, 87, 16, 1)
+
+          &.has-sub-menu
+            padding-right: 10px
+
+            +breakpoint($bp-large)
+              padding-right: 20px
+
+            &::before
+              content: '\f107'
+              position: absolute
+              right: 5px
+              top: 0px
+              font-family: FontAwesome
+              font-style: normal
+              font-weight: normal
+              display: none
+
+              +breakpoint($bp-large)
+                display: block
+
+
+
+            ul
+              display: block
+              padding-left: 20px
+
+              +breakpoint($bp-large)
+                position: absolute
+                top: 100%
+                background: #fff
+                left: 0
+                width: 150px
+                display: none
+                padding: 0
+                z-index: 5
+
+
+              li
+                font-size: 14px
+                line-height: 20px
+                width: 100%
+                margin-bottom: 0
+
+                +breakpoint($bp-large)
+                  border-bottom: 1px #eee dotted
+
+                a
+                  display: block
+                  padding: 5px 10px
+                  +breakpoint($bp-large)
+                    padding: 10px 15px
+
+
+                  &:hover
+                    background: rgba(229, 87, 16, 1)
+                    color: #fff
+
+
+            &:hover
+              ul
+                +breakpoint($bp-large)
+                  display: block
+
+    .module-navigation__contact
+      position: absolute
+      right: 10px
+      top: 5px
+
+      +breakpoint($bp-large)
+        right: 0
+        padding-left: 19px
+        border-left: 2px rgba(151, 151, 151, 1) solid
+
+      .ctaBtn
+        font-size: 11px
+        width: 87px
+        height: 26px
+        line-height: 26px
+        span
+          margin-right: 5px
+        +breakpoint($bp-large)
+          height: 33px
+          line-height: 33px
+          width: 103px
+          font-size: 14px
+          margin-bottom: 0
+
+          span
+            display: none
+
+.mobile-menuBtn
+  margin-left: 10px
+  display: inline-block
+  width: auto
+  border-radius: 2px
+  border: 2px rgba(151, 151, 151, 1) solid
+  font-size: 14px
+  padding: 2px 5px
+  color: rgba(229, 87, 16, 1)
+
+  +breakpoint($bp-large)
+    display: none
+
+.mobile-menuBtn-close
+  position: fixed
+  right: 10px
+  top: 12px
+  margin-left: 10px
+  display: none
+  width: auto
+  border-radius: 2px
+  border: 2px #fff solid
+  font-size: 14px
+  padding: 2px 5px
+  color: #fff
+  z-index: 9
+
+  +breakpoint($bp-large)
+    display: none
+
+
+
+
+

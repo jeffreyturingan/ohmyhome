@@ -3,10 +3,10 @@ var gulp      = require('gulp');
 var clean     = require('gulp-clean');
 var svg       = require('gulp-svgstore');
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
 var concat    = require('gulp-concat');
 var server = require('gulp-server-livereload');
 var jade = require('gulp-jade');
+var imagemin  = require('gulp-imagemin');
 
 // pulls plugins from elixir
 var $ = elixir.Plugins;
@@ -129,6 +129,32 @@ gulp.task('runserver', function () {
         }));
 });
 
+/*
+ |----------------------------------------------------------------
+ | Minify Images
+ |----------------------------------------------------------------
+ |
+ |
+ */
+elixir.extend('images', function (src, dest) {
+    src = src || source.images.files;
+    dest = dest || source.images.dest;
+
+    return new Task('images', function () {
+
+
+        return gulp.src(src)
+            .pipe(imagemin())
+            .on('error', function () {
+                new elixir.Notification('Minifiying Images Failed!');
+
+                this.emit('end');
+            })
+            .pipe(new elixir.Notification('Minified Images!'))
+            .pipe(gulp.dest(dest))
+
+    }).watch(src);
+});
 
 
 /*
@@ -161,6 +187,7 @@ elixir.extend('svgSprite', function (src, dest) {
 elixir(function(mix) {
     mix.cssvendor()
         .svgSprite()
+        .images()
         .sass(source.sass.main, source.sass.output)
         .scripts(source.js.files, source.js.output.file)
         .scripts(source.js.vendor, source.js.output.vendor)

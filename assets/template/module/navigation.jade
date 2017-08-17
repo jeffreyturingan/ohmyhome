@@ -1,0 +1,52 @@
+.module-navigation
+    .module-navigation__container
+        .module-navigation__logo
+            a(href="/")
+                img(src="./dist/images/ohmyhome-logo.png" alt="logo")
+        .module-navigation__mainmenu
+            a.mobile-menuBtn-close
+                i.fa.fa-times
+
+            ul
+                li
+                    a.active(href="") Home
+                li.has-sub-menu
+                    a(href="") Services
+                    ul
+                        li
+                            a(href="") Sub Menu
+                        li
+                            a(href="") Sub Menu
+                        li
+                            a(href="") Sub Menu
+
+                li.has-sub-menu
+                    a(href="") Guides
+                    ul
+                        li
+                            a(href="") Sub Menu
+                        li
+                            a(href="") Sub Menu
+                li.has-sub-menu
+                    a(href="") Blog
+                    ul
+                        li
+                            a(href="") Sub Menu
+                        li
+                            a(href="") Sub Menu
+                li.has-sub-menu
+                    a(href="") Profile
+                    ul
+                        li
+                            a(href="") Sub Menu
+                        li
+                            a(href="") Sub Menu
+        .module-navigation__contact
+            a.ctaBtn(href="tel:68869009 ")
+                span
+                    i.fa.fa-phone
+                | 6886 9009
+
+            a.mobile-menuBtn
+                i.fa.fa-bars
+
