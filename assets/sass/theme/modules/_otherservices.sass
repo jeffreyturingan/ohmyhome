@@ -1,0 +1,93 @@
+.module-otherservices
+  width: 100%
+  overflow: hidden
+
+  .module-otherservices__container
+    width: 100%
+    max-width: 1024px
+    margin: 0 auto
+    padding-bottom: 30px
+
+
+    +breakpoint($bp-large)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 0
+
+
+    .slick-prev
+      position: absolute
+      left: 0px
+      top: 25%
+    .slick-next
+      position: absolute
+      right: 0px
+      top: 25%
+
+    .module-otherservices__item
+      width: 100%
+      padding: 0 34px
+
+      +breakpoint($bp-large)
+        width: 48.046875%
+        margin-bottom: 46px
+        padding: 0
+
+      & > h3
+        font-family: $Roboto
+        font-size: 24px
+        line-height: 24px
+        font-weight: 500
+        display: block
+        margin-bottom: 16px
+
+        +breakpoint($bp-large)
+          display: none
+
+      .module-otherservices__media
+        +aspect-ratio(2.25,1)
+        width: 100%
+        background: rgba(216, 216, 216, 1)
+        margin-bottom: 23px
+
+        +breakpoint($bp-large)
+          width: 31.4453125%
+          +aspect-ratio(0.7,1)
+          float: left
+          margin-right: 25px
+          margin-bottom: 0
+
+      .module-otherservices__text
+
+        +breakpoint($bp-large)
+          padding-top: 15px
+          padding-right: 20px
+
+        & > h3
+          font-family: $Roboto
+          font-size: 24px
+          line-height: 24px
+          font-weight: 500
+          display: none
+
+          +breakpoint($bp-large)
+            margin-bottom: 25px
+            display: block
+
+        p
+          font-family: $Rubik
+          font-weight: 300
+          margin: 0 0 15px
+
+          +breakpoint($bp-large)
+            font-size: 19px
+            line-height: 24px
+            color: rgba(72, 72, 72, 1)
+
+        .ctaBtn
+          +breakpoint($bp-large)
+            height: 31px
+            line-height: 31px
+            width: 130px
+
