@@ -1,0 +1,81 @@
+.module-banner
+  width: 100%
+  overflow: hidden
+  position: relative
+
+  .module-banner__item
+    background-size: cover
+    background-position: center
+    +aspect-ratio(1.25,1)
+
+    +breakpoint($bp-large)
+      +aspect-ratio(3.54,1)
+
+    .module-banner__text
+      position: absolute
+      background-color: #fff
+      width: 49.72222222222222%
+      left: 42.5%
+      top: 50%
+      transform: translateY(-50%)
+      padding: 13px
+      opacity: 0
+      transition: 500ms
+
+
+      +breakpoint($bp-large)
+        left: 56.94444444444444%
+        width: 375px
+        height: auto
+        padding: 25px
+
+      p
+        font-family: $Rubik
+        font-size: 14px
+        font-weight: 300
+        color: rgba(74, 74, 74, 1)
+        text-align: left
+        line-height: 16px
+
+        +breakpoint($bp-large)
+          font-size: 19px
+          line-height: 24px
+          color: rgba(72, 72, 72, 1)
+
+
+      .module-banner__title
+        font-family: $Roboto
+        font-size: 19px
+        font-weight: 500
+        color: rgba(74, 74, 74, 1)
+        text-align: left
+        margin-bottom: 10px
+
+        +breakpoint($bp-large)
+          font-size: 24px
+          margin-bottom: 23px
+
+      .module-banner__price
+        font-family: $Roboto
+        font-size: 19px
+        font-weight: 500
+        color: rgba(74, 74, 74, 1)
+        text-align: left
+        margin-bottom: 10px
+
+        +breakpoint($bp-large)
+          font-size: 24px
+          margin-bottom: 15px
+
+
+
+      .ctaBtn,.ctaBtn-light
+        display: none
+
+        +breakpoint($bp-large)
+          display: inline-block
+
+    &.slick-slide.works
+      .module-banner__text
+        opacity: 1
+

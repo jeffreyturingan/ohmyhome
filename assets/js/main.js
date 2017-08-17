@@ -2,5 +2,6 @@
 var $ = jQuery;
 
 mobilenavigation();
+bannerslider();
 videoplayer();
 servicesslider();
