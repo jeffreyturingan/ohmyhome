@@ -49,16 +49,23 @@
         +breakpoint($bp-large)
           padding: 39px 5.7026476578411405% 10px 16.293279022403258%
 
-        &.has-icon
+        &.has-icon // create individual class for each icon
           &::before
-            content: ''
+            content: '\f08a' // can set icon using fontawesome
             display: block
             width: 30px
             min-height: 40px
-            background: rgba(#ccc,0.3) //icon sets here
+            //background: rgba(#ccc,0.3) //icon can be sets here
             position: absolute
             left: 12px
             top: 18px
+            font-family: FontAwesome
+            font-style: normal
+            font-weight: normal
+            text-decoration: inherit
+            line-height: 40px
+            text-align: center
+            font-size: 25px
 
             +breakpoint($bp-large)
               left: 20px
