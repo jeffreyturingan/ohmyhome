@@ -7,21 +7,12 @@ function savingsrange() {
         var _cval = $(this).val();
         var _savings = (_cval * 0.02) - 2888;
 
-
-        $('.sellingprice span').text(commaSeparateNumber(_cval));
-        $('.savingsamount span').text(commaSeparateNumber(_savings));
-
-
-
+        $('.sellingprice span').text((Math.round(_cval * 100) / 100).toLocaleString());
+        $('.savingsamount span').text((Math.round(_savings * 100) / 100).toLocaleString());
 
     });
 
 
 
 }
-function commaSeparateNumber(val){
-    while (/(\d+)(\d{3})/.test(val.toString())){
-        val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
-    }
-    return val;
-}
+

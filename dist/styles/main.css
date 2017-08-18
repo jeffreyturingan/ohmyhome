@@ -321,10 +321,12 @@ input[type=range].range {
   -webkit-appearance: none;
   width: 100%;
   margin: 13px 0;
+  outline-width: 0 !important;
 }
 
 input[type=range].range:focus {
   outline: none;
+  outline-width: 0 !important;
 }
 
 input[type=range].range::-webkit-slider-runnable-track {
@@ -335,6 +337,7 @@ input[type=range].range::-webkit-slider-runnable-track {
   background: #d8d8d8;
   border-radius: 6.4px;
   border: 0px solid rgba(255, 255, 255, 0);
+  outline-width: 0 !important;
 }
 
 input[type=range].range::-webkit-slider-thumb {
@@ -347,6 +350,7 @@ input[type=range].range::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -8px;
+  outline-width: 0 !important;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -359,6 +363,7 @@ input[type=range].range::-webkit-slider-thumb {
 
 input[type=range].range:focus::-webkit-slider-runnable-track {
   background: #d8d8d8;
+  outline-width: 0 !important;
 }
 
 input[type=range].range::-moz-range-track {
@@ -369,6 +374,7 @@ input[type=range].range::-moz-range-track {
   background: #d8d8d8;
   border-radius: 6.4px;
   border: 0px solid rgba(255, 255, 255, 0);
+  outline-width: 0 !important;
 }
 
 input[type=range].range::-moz-range-thumb {
@@ -379,6 +385,7 @@ input[type=range].range::-moz-range-thumb {
   border-radius: 50px;
   background: #e55710;
   cursor: pointer;
+  outline-width: 0 !important;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -395,6 +402,7 @@ input[type=range].range::-ms-track {
   background: transparent;
   border-color: transparent;
   color: transparent;
+  outline-width: 0 !important;
 }
 
 input[type=range].range::-ms-fill-lower, input[type=range].range::-ms-fill-upper {
@@ -412,6 +420,7 @@ input[type=range].range::-ms-thumb {
   border-radius: 50px;
   background: #e55710;
   cursor: pointer;
+  outline-width: 0 !important;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -419,6 +428,10 @@ input[type=range].range::-ms-thumb {
     height: 35px;
     width: 35px;
   }
+}
+
+input[type=range].range:focus {
+  outline-width: 0 !important;
 }
 
 input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-ms-fill-upper {
