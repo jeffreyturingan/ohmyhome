@@ -1,7 +1,8 @@
 # ohmyhome
 
 **Project Setup**
-
+- install node
+- install bower
 - run "npm install" (download all node dependencies)
 - run "bower install" (download all project dependencies)
 
