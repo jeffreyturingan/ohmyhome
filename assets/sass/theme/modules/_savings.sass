@@ -1,9 +1,12 @@
 .module-savings
   width: 100%
   max-width: 854px
-  margin: 0 auto
+  margin: 35px auto
+  padding: 0 30px
+  text-align: center
   +breakpoint($bp-large)
     margin: 47px auto 32px
+    padding: 0
 
   h2
     font-family: Roboto
@@ -34,3 +37,99 @@
       margin: 0 auto
       max-width: 598px
 
+
+  .module-savings__range
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 40px
+
+    +breakpoint($bp-large)
+      margin-top: 50px
+
+    .module-savings__range-slide
+      width: 100%
+      +breakpoint($bp-large)
+        width: 40%
+
+
+      h3
+        font-family: 'Roboto'
+        font-size: 19px
+        font-weight: 500
+        color: rgba(74, 74, 74, 1)
+        text-align: center
+        margin-bottom: 20px
+
+        +breakpoint($bp-large)
+          font-size: 24px
+          margin-bottom: 34px
+
+      .sellingprice
+        font-family: 'Roboto'
+        font-size: 24px
+        font-weight: 500
+        color: rgba(72, 72, 72, 1)
+        text-align: center
+        margin-bottom: 15px
+
+        +breakpoint($bp-large)
+          margin-bottom: 25px
+
+
+      .range-slider
+        width: 100%
+
+    .module-savings__range-total
+      width: 100%
+      +breakpoint($bp-large)
+        width: 40%
+
+      .module-savings__text
+        padding: 10px
+        border: 1px rgba(189, 189, 189, 1) solid
+        overflow: hidden
+        margin-bottom: 35px
+        margin-top: 30px
+
+        +breakpoint($bp-large)
+          border: 0
+          padding: 0
+          margin-bottom: 0
+          margin-top: 0
+
+      h3
+        font-family: 'Roboto'
+        font-size: 19px
+        font-weight: 500
+        color: rgba(74, 74, 74, 1)
+        text-align: left
+        float: left
+        width: 50%
+
+        +breakpoint($bp-large)
+          text-align: center
+          float: none
+          width: 100%
+          font-size: 24px
+          margin-bottom: 20px
+
+
+      p.savingsamount
+        margin: 0 0
+        font-family: 'Roboto'
+        font-size: 24px
+        font-weight: bold
+        color: rgba(229, 87, 16, 1)
+        text-align: right
+        float: right
+        width: 50%
+
+        +breakpoint($bp-large)
+          float: none
+          width: 100%
+          font-size: 44px
+          text-align: center
+          line-height: 44px
+          margin-bottom: 15px

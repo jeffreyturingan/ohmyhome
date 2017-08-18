@@ -340,13 +340,21 @@ input[type=range].range::-webkit-slider-runnable-track {
 input[type=range].range::-webkit-slider-thumb {
   box-shadow: 0px 0px 1px #bdbdbd, 0px 0px 0px #cacaca;
   border: 3px solid #ffffff;
-  height: 35px;
-  width: 3px;
+  height: 25px;
+  width: 25px;
   border-radius: 50px;
   background: #e55710;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -13px;
+  margin-top: -8px;
+}
+
+@media only screen and (min-width: 1024px) {
+  input[type=range].range::-webkit-slider-thumb {
+    height: 35px;
+    width: 35px;
+    margin-top: -13px;
+  }
 }
 
 input[type=range].range:focus::-webkit-slider-runnable-track {
@@ -366,11 +374,18 @@ input[type=range].range::-moz-range-track {
 input[type=range].range::-moz-range-thumb {
   box-shadow: 0px 0px 1px #bdbdbd, 0px 0px 0px #cacaca;
   border: 3px solid #ffffff;
-  height: 35px;
-  width: 3px;
+  height: 20px;
+  width: 20px;
   border-radius: 50px;
   background: #e55710;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  input[type=range].range::-moz-range-thumb {
+    height: 35px;
+    width: 35px;
+  }
 }
 
 input[type=range].range::-ms-track {
@@ -392,12 +407,18 @@ input[type=range].range::-ms-fill-lower, input[type=range].range::-ms-fill-upper
 input[type=range].range::-ms-thumb {
   box-shadow: 0px 0px 1px #bdbdbd, 0px 0px 0px #cacaca;
   border: 3px solid #ffffff;
-  height: 35px;
-  width: 3px;
+  height: 25px;
+  width: 25px;
   border-radius: 50px;
   background: #e55710;
   cursor: pointer;
-  height: 9px;
+}
+
+@media only screen and (min-width: 1024px) {
+  input[type=range].range::-ms-thumb {
+    height: 35px;
+    width: 35px;
+  }
 }
 
 input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-ms-fill-upper {
@@ -829,12 +850,15 @@ input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-m
 .module-savings {
   width: 100%;
   max-width: 854px;
-  margin: 0 auto;
+  margin: 35px auto;
+  padding: 0 30px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1024px) {
   .module-savings {
     margin: 47px auto 32px;
+    padding: 0;
   }
 }
 
@@ -872,6 +896,142 @@ input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-m
     display: block;
     margin: 0 auto;
     max-width: 598px;
+  }
+}
+
+.module-savings .module-savings__range {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range {
+    margin-top: 50px;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-slide {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-slide {
+    width: 40%;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-slide h3 {
+  font-family: 'Roboto';
+  font-size: 19px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-slide h3 {
+    font-size: 24px;
+    margin-bottom: 34px;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-slide .sellingprice {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  color: #484848;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-slide .sellingprice {
+    margin-bottom: 25px;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-slide .range-slider {
+  width: 100%;
+}
+
+.module-savings .module-savings__range .module-savings__range-total {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-total {
+    width: 40%;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-total .module-savings__text {
+  padding: 10px;
+  border: 1px #bdbdbd solid;
+  overflow: hidden;
+  margin-bottom: 35px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-total .module-savings__text {
+    border: 0;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-total h3 {
+  font-family: 'Roboto';
+  font-size: 19px;
+  font-weight: 500;
+  color: #4a4a4a;
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-total h3 {
+    text-align: center;
+    float: none;
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.module-savings .module-savings__range .module-savings__range-total p.savingsamount {
+  margin: 0 0;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  color: #e55710;
+  text-align: right;
+  float: right;
+  width: 50%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .module-savings .module-savings__range .module-savings__range-total p.savingsamount {
+    float: none;
+    width: 100%;
+    font-size: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1296,12 +1456,14 @@ input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-m
   position: absolute;
   left: 0px;
   top: 25%;
+  z-index: 6;
 }
 
 .module-otherservices .module-otherservices__container .slick-next {
   position: absolute;
   right: 0px;
   top: 25%;
+  z-index: 6;
 }
 
 .module-otherservices .module-otherservices__container .module-otherservices__item {
@@ -1338,6 +1500,8 @@ input[type=range].range:focus::-ms-fill-lower, input[type=range].range:focus::-m
   width: 100%;
   background: #d8d8d8;
   margin-bottom: 23px;
+  background-size: cover;
+  background-position: center;
 }
 
 .module-otherservices .module-otherservices__container .module-otherservices__item .module-otherservices__media:before {

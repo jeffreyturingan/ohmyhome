@@ -5,3 +5,4 @@ mobilenavigation();
 bannerslider();
 videoplayer();
 servicesslider();
+savingsrange();
