@@ -81,6 +81,7 @@ function servicesslider() {
 
 
 }
+
 function videoplayer() {
     var _playvideo = $('.js-videoplayer');
     var _videoembed = $('.js-videoplayer .acontent');
